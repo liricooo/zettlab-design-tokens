@@ -10,7 +10,7 @@
 import * as fs from 'fs'
 import * as path from 'path'
 
-const TOKENS_PATH = path.resolve(__dirname, '../tokens/tokens.json')
+const TOKENS_PATH = path.resolve(__dirname, '../tokens.json')
 const THEME_PATH = path.resolve(__dirname, '../constants/theme.ts')
 const DRY_RUN = process.argv.includes('--dry-run')
 

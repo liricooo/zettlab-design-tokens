@@ -3,7 +3,7 @@
 > **Last updated:** 2026-04-22
 >
 > 给所有未来的设计/开发决策提供"为什么"的锚点。
-> Token 值见 `tokens/tokens.json`，组件规范见 `docs/theme/components.md`。
+> Token 值见 `tokens.json`，组件规范见 `docs/theme/components.md`。
 
 ## Users
 

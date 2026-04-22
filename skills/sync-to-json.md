@@ -1,6 +1,6 @@
 # Skill: sync-to-json
 
-Sync token values from `constants/theme.ts` into `tokens/tokens.json`.
+Sync token values from `constants/theme.ts` into `tokens.json`.
 
 Use this after modifying token values in code, so Figma stays in sync.
 

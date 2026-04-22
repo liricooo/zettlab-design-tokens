@@ -13,7 +13,7 @@
 ```
 Figma (Tokens Studio plugin)
     ↕ GitHub Sync (push/pull)
-tokens/tokens.json          ← W3C DTCG 格式，共享 source of truth
+tokens.json          ← W3C DTCG 格式，共享 source of truth
     ↕ 构建脚本
 constants/theme.ts          ← 代码侧消费
     ↓ getThemeVars() 注入 CSS 变量
@@ -88,7 +88,7 @@ tailwind.config.js          ← Tailwind class 读取 var(--color-*)
 ### Figma → 代码
 
 1. 在 Figma 中通过 Tokens Studio 修改 token
-2. Tokens Studio push 到 GitHub（`tokens/tokens.json` 更新）
+2. Tokens Studio push 到 GitHub（`tokens.json` 更新）
 3. 运行 `scripts/sync-to-code.ts`
 4. 脚本读取 `tokens.json`，生成 `constants/theme.ts` 的 primitives + dark + light 对象
 5. Review diff，commit
@@ -97,7 +97,7 @@ tailwind.config.js          ← Tailwind class 读取 var(--color-*)
 
 1. 在 `constants/theme.ts` 中修改 token 值
 2. 运行 `scripts/sync-to-json.ts`
-3. 脚本读取 `theme.ts`，更新 `tokens/tokens.json` 中对应的 `$value`
+3. 脚本读取 `theme.ts`，更新 `tokens.json` 中对应的 `$value`
 4. Commit push
 5. Tokens Studio pull 回 Figma
 
@@ -131,7 +131,7 @@ tailwind.config.js          ← Tailwind class 读取 var(--color-*)
 ### sync-to-code（JSON → theme.ts）
 
 步骤：
-1. 读取 `tokens/tokens.json`
+1. 读取 `tokens.json`
 2. 解析 `primitive/color` → 生成 `primitives` 对象
 3. 解析 `semantic/dark` + `semantic/light` → 生成 `dark` / `light` 对象
 4. 写入 `constants/theme.ts`（保留手动代码区域：motion、opacity、borderWidth、typography 等）
@@ -142,15 +142,14 @@ tailwind.config.js          ← Tailwind class 读取 var(--color-*)
 步骤：
 1. 读取 `constants/theme.ts`
 2. 提取 `primitives`、`dark`、`light` 对象的值
-3. 更新 `tokens/tokens.json` 中对应 `$value`
+3. 更新 `tokens.json` 中对应 `$value`
 4. 保留 `$themes`、`$metadata` 不变
 5. 展示 diff，确认后写入
 
 ## 文件结构
 
 ```
-tokens/
-  tokens.json              ← W3C DTCG，Tokens Studio 兼容（已创建）
+tokens.json                ← W3C DTCG，Tokens Studio 兼容（项目根目录）
 scripts/
   sync-to-code.ts          ← JSON → theme.ts（待实现）
   sync-to-json.ts          ← theme.ts → JSON（待实现）
@@ -176,7 +175,7 @@ docs/theme/
 
 ### design.md — 瘦身
 
-移除与 tokens.json 重复的色值表、字号表、间距表等，改为指向 `tokens/tokens.json` 作为值的 source of truth。保留：
+移除与 tokens.json 重复的色值表、字号表、间距表等，改为指向 `tokens.json` 作为值的 source of truth。保留：
 - Section 1: Visual Theme（设计方向）
 - Section 2: Token 架构（三层模型 + 命名约定）
 - Section 8: Component Specifications（组件级规范）
@@ -186,7 +185,7 @@ docs/theme/
 
 ## 实施顺序
 
-1. ~~创建 `tokens/tokens.json`~~ ✅ 已完成
+1. ~~创建 `tokens.json`~~ ✅ 已完成
 2. ~~定义 motion/opacity/borderWidth token 并替换硬编码~~ ✅ 已完成
 3. 实现 `scripts/sync-to-code.ts`
 4. 实现 `scripts/sync-to-json.ts`

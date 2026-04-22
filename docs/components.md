@@ -2,7 +2,7 @@
 
 > **Last updated:** 2026-04-22
 >
-> 组件级设计规范。Token 值见 `tokens/tokens.json`，品牌上下文见 `impeccable.md`。
+> 组件级设计规范。Token 值见 `tokens.json`，品牌上下文见 `impeccable.md`。
 
 ---
 

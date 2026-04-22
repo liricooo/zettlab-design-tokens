@@ -1,6 +1,6 @@
 # Skill: sync-to-code
 
-Sync token values from `tokens/tokens.json` into `constants/theme.ts`.
+Sync token values from `tokens.json` into `constants/theme.ts`.
 
 Use this after Figma/Tokens Studio pushes updated token values to GitHub.
 

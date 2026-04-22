@@ -1,15 +1,15 @@
 ---
 name: validate
-description: 检查 tokens/tokens.json 规范性（引用完整性、dark/light 对称、hex 大写、$type 齐全、theme.ts 漂移）
+description: 检查 tokens.json 规范性（引用完整性、dark/light 对称、hex 大写、$type 齐全、theme.ts 漂移）
 ---
 
 # Skill: validate
 
-Validate `tokens/tokens.json` against Zettlab design system conventions.
+Validate `tokens.json` against Zettlab design system conventions.
 
 ## Steps
 
-1. Load `tokens/tokens.json`.
+1. Load `tokens.json`.
 
 2. **Broken references** — collect all `{token.path}` references from `$value` fields. Collect all defined token paths. Report any reference that does not resolve to a defined token.
 

@@ -44,7 +44,7 @@ scripts/
 ```
 Figma (Tokens Studio)
     ↕ GitHub Sync
-tokens/tokens.json
+tokens.json
     ↕ sync scripts
 constants/theme.ts → tailwind.config.js → components
 ```

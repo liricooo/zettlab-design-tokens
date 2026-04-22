@@ -4,7 +4,7 @@ Zettlab Design Token System. Three-layer architecture (Primitive → Semantic �
 
 ## The only file that matters
 
-`tokens/tokens.json` — all tokens live here in W3C DTCG format (Tokens Studio compatible).
+`tokens.json` — all tokens live here in W3C DTCG format (Tokens Studio compatible).
 
 ## Rules
 

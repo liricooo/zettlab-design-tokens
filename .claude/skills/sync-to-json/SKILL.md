@@ -1,11 +1,11 @@
 ---
 name: sync-to-json
-description: 从 constants/theme.ts 同步 token 值到 tokens/tokens.json（代码改完后同步到 Figma 用）
+description: 从 constants/theme.ts 同步 token 值到 tokens.json（代码改完后同步到 Figma 用）
 ---
 
 # Skill: sync-to-json
 
-Sync token values from `constants/theme.ts` into `tokens/tokens.json`.
+Sync token values from `constants/theme.ts` into `tokens.json`.
 
 Use this after modifying token values in code, so Figma stays in sync.
 
